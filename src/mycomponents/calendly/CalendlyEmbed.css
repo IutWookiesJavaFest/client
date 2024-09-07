@@ -1,0 +1,38 @@
+@media screen and (min-width: 1024px) {
+    .calendly h1{
+        font-size: 1.7vw;
+        margin-bottom: -3vw;
+    }
+    .calendly-inline-widget {
+        width: 100%;
+        aspect-ratio: 9/7;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .calendly-inline-widget {
+        width: 80%;
+        aspect-ratio: 1;
+        margin: auto;
+        margin-top: 5vw;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    .calendly-inline-widget {
+        width: 90%;
+        aspect-ratio: 6/7;
+        margin: auto;
+        margin-top: 8vw;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .calendly-inline-widget {
+        width: 90%;
+        aspect-ratio: 3/5;
+        margin: auto;
+        margin-top: 10vw;
+    }
+}

@@ -1,0 +1,9 @@
+@media (min-width: 1024px) {
+    .todo{
+        padding:0 10vw;
+        padding-top: 8vw;
+    }
+    .todo label{
+        font-size: 1.5vw;
+    }
+}

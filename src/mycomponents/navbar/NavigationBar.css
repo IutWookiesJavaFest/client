@@ -1,0 +1,441 @@
+.homepage_navigation{
+    position: relative;
+}
+@media (min-width: 1024px) {
+    .homepage_navigation_mainBox{
+        width: 100%;
+        height: 5.5vw;
+        display: flex;
+        background-color: rgb(255,255,255);
+        padding: 0 5%;
+        position: absolute;
+        z-index: 100000;
+    }
+    .homepage_navigation_fixed{
+        position: fixed;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .homepage_navigation_logoBar{
+        width: 70%;
+        height: 100%;
+        display: flex;
+    }
+    .homepage_navigation_logoBar img{
+        /* width: 50%; */
+        width: 12vw;
+    }
+    .navBarIconBar{
+        visibility: hidden;
+        display: none;
+    }
+    .navBurgerIcon{
+        visibility: hidden;
+        color: transparent;
+        display: none;
+    }
+    .homepage_navigation_logoBar .searchbox{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 20vw;
+        margin: auto;
+        margin-top: 1.2vw;
+    }
+    .homepage_navigation_logoBar .searchBar{
+        display: flex;
+        align-items: center;
+        background-color: rgb(235,235,235);
+        height: 3vw;
+        width: 100%;
+        margin: auto;
+        border-radius: 5vw;
+        padding: 0 1vw;
+    }
+    .homepage_navigation_logoBar .searchBar input{
+        background-color: transparent;
+        outline: none;
+        height: 100%;
+        margin-left: 0.5vw;
+    }
+    .homepage_navigation_logoBar .searchlist{
+        width: 90%;
+        margin: auto;
+        background-color: white;
+    }
+    .homepage_navigation_logoBar .searchlist .user{
+        padding: 0.5vw 1vw;
+        display: flex;
+        align-items: center;
+    }
+    .homepage_navigation_logoBar .searchlist .user img{
+        width: 2.5vw;
+        height: 2.5vw;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 0.8vw;
+    }
+
+    .homepage_navigation_navMain{
+        width: 30%;
+    }
+    .homepage_navigation_navMenu{
+        height: 100%;
+        color: black;
+        display: flex;
+        margin: auto;
+    }
+
+    .homepage_navigation_navSubMenu{
+        width: 45vw;
+        margin-right: 0;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+    .homepage_navigation_navMenuPageLinks{
+        font-size: 1vw;
+        transition: linear 0.1s;
+        cursor: pointer;
+        margin-right: 2vw;
+        /* background-color: pink; */
+    }
+    .navMenuPageLinksWhy{
+        /* background-color: red; */
+        height: 5.5vw;
+        display: flex;
+        align-items: center;
+    }
+    .homepage_navigation_loginButton{
+        background-color: rgb(9,111,88);
+        background-color: rgb(8,36,54);
+        font-size: 1vw;
+        padding: 0.8vw 1.1vw;
+        border-radius: 0.7vw;
+        text-align: left;
+        color: white;
+    }
+    .homepage_navigation_navSubMenuImg{
+        width: 3vw;
+        height: 3vw;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .homepage_navigation_mainBox{
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        z-index: 100000;
+    }
+    .homepage_navigation_fixed{
+        position: fixed;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .homepage_navigation_logoBar{
+        width: 100%;
+        height: 10vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5vw; 
+        position: relative; 
+        z-index: 100000;
+        background-color: white;
+    }
+    .homepage_navigation_logoBar img{
+        width: 25vw;
+    }
+
+    .navBarIconBar{
+        margin-right: 0%;
+    }
+    .navBurgerIcon{
+        position: absolute;
+        top:3vw;
+        right: 5vw;
+        font-size: 4.3vw;
+    }
+    .navBarIconCross{
+        visibility: hidden;
+    }
+    .homepage_navigation_logoBar .searchbox{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 35vw;
+        margin: auto;
+        margin-top: 2vw;
+    }
+    .homepage_navigation_logoBar .searchBar{
+        display: flex;
+        align-items: center;
+        background-color: rgb(235,235,235);
+        width: 100%;
+        height: 5.5vw;
+        margin: auto;
+        border-radius: 5vw;
+        padding: 0 2vw;
+    }
+    .homepage_navigation_logoBar .searchBar input{
+        background-color: transparent;
+        outline: none;
+        height: 100%;
+        margin-left: 0.5vw;
+        width: 85%;
+    }
+    .homepage_navigation_logoBar .searchlist{
+        width: 90%;
+        margin: auto;
+        background-color: white;
+    }
+    .homepage_navigation_logoBar .searchlist .user{
+        padding: 1.5vw 2vw;
+        display: flex;
+        align-items: center;
+    }
+    .homepage_navigation_logoBar .searchlist .user img{
+        width: 4vw;
+        height: 4vw;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 1vw;
+    }
+
+    .homepage_navigation_navMain{
+        position: absolute;
+        width: 100%;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        border-bottom: 1px solid black;
+        padding-top: 2vw;
+        background-color: white;
+        transform: translate(0,-97vw);
+        transition: linear 0.2s; 
+    }
+
+    .homepage_navigation_navMainOpen{
+        transform: translate(0,0);
+    }
+    .homepage_navigation_navSubMenu{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        z-index: 1000;
+    }
+    .homepage_navigation_navMenuPageLinks{
+        padding: 3vw 2vw;
+        font-size: 2vw;
+    }
+    .homepage_navigation_loginButton{
+        background-color: rgb(9,111,88);
+        background-color: rgb(8,36,54);
+        width: 70%;
+        margin: auto;
+        color: white;
+        padding: 1vw 0;
+        border-radius: 0.5vw;
+        text-align: center;
+    }
+    .homepage_navigation_navSubMenuImg{
+        width: 6vw;
+        height: 6vw;
+        border-radius: 50%;
+        margin: auto;
+        margin-top: 1vw;
+        border: 2px solid black;
+    }
+}
+
+@media (max-width: 767px){
+    .homepage_navigation_mainBox{
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        z-index: 100000;
+    }
+    .homepage_navigation_fixed{
+        position: fixed;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .homepage_navigation_logoBar{
+        width: 100%;
+        height: 16.5vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5vw; 
+        position: relative; 
+        z-index: 100000;
+        background-color: white;
+    }
+    .homepage_navigation_logoBar img{
+        width: 35vw;
+        /* height: 80%; */
+    }
+
+    .navBarIconBar{
+        margin-right: 0%;
+    }
+    .navBurgerIcon{
+        position: absolute;
+        top:5vw;
+        right: 5vw;
+        font-size: 6.2vw;
+    }
+    .navBarIconCross{
+        visibility: hidden;
+    }
+    .homepage_navigation_logoBar .searchbox{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 40vw;
+        margin: auto;
+        margin-top: 4vw;
+    }
+    .homepage_navigation_logoBar .searchBar{
+        display: flex;
+        align-items: center;
+        background-color: rgb(235,235,235);
+        width: 100%;
+        height: 8vw;
+        margin: auto;
+        border-radius: 5vw;
+        padding: 0 3vw;
+    }
+    .homepage_navigation_logoBar .searchBar input{
+        background-color: transparent;
+        outline: none;
+        height: 100%;
+        margin-left: 0.5vw;
+        width: 85%;
+    }
+    .homepage_navigation_logoBar .searchlist{
+        width: 95%;
+        margin: auto;
+        background-color: white;
+    }
+    .homepage_navigation_logoBar .searchlist .user{
+        padding: 2vw;
+        display: flex;
+        align-items: center;
+    }
+    .homepage_navigation_logoBar .searchlist .user img{
+        width: 6vw;
+        height: 6vw;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 1.5vw;
+    }
+    .homepage_navigation_navMain{
+        position: absolute;
+        width: 100%;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        border-bottom: 1px solid black;
+        padding-top: 2vw;
+        background-color: white;
+        transform: translate(0,-97vw);
+        transition: linear 0.2s; 
+
+    }
+
+    .homepage_navigation_navMainOpen{
+        transform: translate(0,0);
+    }
+    .homepage_navigation_navSubMenu{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        z-index: 1000;
+    }
+    .homepage_navigation_navMenuPageLinks{
+        padding: 3vw 2vw;
+        font-size: 4.5vw;
+    }
+    .homepage_navigation_loginButton{
+        background-color: rgb(9,111,88);
+        background-color: rgb(8,36,54);
+        width: 70%;
+        margin: auto;
+        color: white;
+        padding: 1vw 0;
+        border-radius: 0.5vw;
+        text-align: center;
+    }
+    .homepage_navigation_navSubMenuImg{
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        margin: auto;
+        margin-top: 4vw;
+        border: 2px solid black;
+    }
+}
+
+.homepage_navigation_navMenuPageLinks:hover{
+    color: rgb(9,111,88);
+}
+.navMenuPageLinks:hover{
+    color: rgb(9,111,88);
+    font-weight: 500;
+}
+
+.watchButton:hover{
+    background-color: rgb(255,0,122);;
+}
+
+.tryLink:hover{
+    background-color: rgb(37,90,84);
+    color: white;
+    
+}
+.navBurgerIcon:active{
+    transform: scale(0.8);
+}
+
+
+.homepage_navigation_submenu{
+    width: 47vw;
+    height: 24vw;
+    background-color: white;
+    position: absolute;
+    margin-left: 19vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 10vw 2vw 6vw;
+    /* display: none; */
+}
+.homepage_navigation_submenuToggle{
+    display: block;
+}
+
+.homepage_navigation_submenuOverview{
+    display: flex;
+    flex-direction: column;
+}
+.homepage_navigation_submenuOverview h2{
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: rgba(40,40,40);
+    margin-bottom: 1.3vw;
+}
+.homepage_navigation_submenuOverview a{
+    font-size: 0.85vw;
+    margin-bottom:0.8vw;
+    padding-left: 0.7vw;
+
+}
+.homepage_navigation_submenuOverview a:hover{
+    color: grey;
+}
+.navbar_getLink:hover{
+    background-color: rgb(112, 139, 87);
+}
+.navbar_login:hover{
+    background-color: rgb(9,111,88,0.8);
+}

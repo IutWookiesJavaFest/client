@@ -1,0 +1,17 @@
+.profile{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom left, rgb(218,240,235), rgb(255,255,255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile button{
+    background-color: rgb(9,111,88);
+    color: white;
+    padding: 1vw 2vw;
+    border-radius: 0.3vw;
+}
+.profile button:hover{
+    background-color: rgb(9,111,88,0.8);
+}
