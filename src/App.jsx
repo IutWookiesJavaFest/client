@@ -7,18 +7,23 @@ import Homepage from './pages/homepage/Homepage';
 import Signup from './pages/auth/signup/Signup';
 import PrivateRoute from './utils/PrivateRoute';
 import PublicRoute from './utils/PublicRoute';
-import Profile from './pages/profile/profile/Profile';
+import Profile from './pages/profile/Profile';
 import DoctorList from './pages/doctors/doctorlist/DoctorList';
 import DoctorView from './pages/doctors/doctorview/DoctorView';
-import Hospital from './pages/doctors/hospital/Hospital';
+import Hospital from './pages/hospital/Hospital';
 import Chat from './pages/chat/Chat';
-import Todo from './pages/profile/todo/Todo';
-import TodoCreate from './pages/profile/todo/TodoCreate';
-import TodoUpdate from './pages/profile/todo/TodoUpdate';
-import Medicine from './pages/doctors/medicine/Medicine';
-import MedicineView from './pages/doctors/medicine/MedicineView';
-import MedicineCreate from './pages/doctors/medicine/MedicineCreate';
-import MedicineUpdate from './pages/doctors/medicine/MedicineUpdate';
+import Todo from './pages/todo/Todo';
+import TodoCreate from './pages/todo/TodoCreate';
+import TodoUpdate from './pages/todo/TodoUpdate';
+import Medicine from './pages/medicine/Medicine';
+import MedicineView from './pages/medicine/MedicineView';
+import MedicineCreate from './pages/medicine/MedicineCreate';
+import MedicineUpdate from './pages/medicine/MedicineUpdate';
+import DoctorCreate from './pages/doctors/DoctorCreate';
+import DoctorUpdate from './pages/doctors/DoctorUpdate';
+import ProfileUpdate from './pages/profile/ProfileUpdate';
+import HealthAdd from './pages/health/HealthAdd';
+import { HealthHistory } from './pages/health/HealthHistory';
 
 const App = () => {
   const loggedIn = checkLogin();
@@ -37,19 +42,26 @@ const App = () => {
             
             <Route element={<PrivateRoute />}>
               <Route path='/profile' element={<Profile/>} />
+              <Route path='/profile/update' element={<ProfileUpdate/>} />
               
               <Route path='/profile/todo' element={<Todo/>} />
               <Route path='/profile/todo/create' element={<TodoCreate/>} />
               <Route path='/profile/todo/update' element={<TodoUpdate/>} />
               
-              <Route path = '/doctors/view/:doctorId' element={<DoctorView />} />
+              <Route path = '/doctors/view/:id' element={<DoctorView />} />
+              <Route path = '/doctors/create' element={<DoctorCreate />} />
+              <Route path = '/doctors/update' element={<DoctorUpdate />} />
               <Route path = '/hospitals/map' element={<Hospital />} />
               
               <Route path="/chat" element={<Chat/>} />
 
+              {/* <Route path='/medicine/view/:id' element={<MedicineView/>} /> */}
               <Route path='/medicine/view/:id' element={<MedicineView/>} />
               <Route path='/medicine/create' element={<MedicineCreate/>} />
               <Route path='/medicine/update' element={<MedicineUpdate/>} />
+
+              <Route path='/health/add' element={<HealthAdd/>} />
+              <Route path='/health/history' element={<HealthHistory/>} />
             </Route>
           </Routes>
         </UserProvider>

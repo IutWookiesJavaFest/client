@@ -10,14 +10,14 @@ const API_PATH = import.meta.env.VITE_API_PATH;
 
 const DoctorView = () => {
 
-  const { doctorId } = useParams()
+  const { id } = useParams()
   const [doctorInfo, setDoctorInfo] = useState(null)
 
   useEffect(() => {
     console.log(name);
     const fetchDoctorInfo = async () => {
       try {
-        const response = await axios.get(`${API_PATH}/doctors/view/${doctorId}`)
+        const response = await axios.get(`${API_PATH}/doctors/view/${id}`)
         setDoctorInfo(response.data)
       } catch (error) {
         console.error('Error fetching doctor information:', error)
@@ -25,7 +25,7 @@ const DoctorView = () => {
     }
 
     fetchDoctorInfo()
-  }, [doctorId])
+  }, [id])
 
   // if (!doctorInfo) {
   //   return (<PageLoading />)

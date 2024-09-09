@@ -138,7 +138,7 @@ const MedicineUpdate = () => {
                     />
                 </div>
 
-                <Button variant="outline" type="button" onClick={()=>handleUpdate()}>
+                <Button type="button" onClick={()=>handleUpdate()}>
                     {buttonLoading?
                         <ButtonLoading />
                         :

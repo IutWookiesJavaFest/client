@@ -10,6 +10,8 @@ import {
   } from "@/components/ui/table"
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom'; 
+import {SquarePlus} from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const DoctorList = () => {
   
@@ -60,7 +62,11 @@ const DoctorList = () => {
 
 
   const navigate = useNavigate(); // Initialize useNavigate
-    
+  
+  const createDoctor = () => {
+    navigate(`/doctors/create`);
+  };
+
   // Function to handle navigation to the doctor's detailed view
   const navigateToDoctor = (id) => {
     navigate(`/doctors/view/${id}`);
@@ -73,6 +79,8 @@ const DoctorList = () => {
         <FaSearch/>
         <input type="text" value={searchInput} onChange={handleSearchInputChange} placeholder='Search doctor by name, keyword'/>
       </div>
+
+      <Button className="mb-[5vw] md:mb-[3vw] lg:mb-[2vw]" onClick={()=> createDoctor()}><SquarePlus className="mr-[2%]"/>Add Medicine</Button>
       <Table className="cursor-pointer">
         <TableHeader>
             <TableRow>

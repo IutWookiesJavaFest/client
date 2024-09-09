@@ -10,10 +10,11 @@
         padding: 0 5%;
         position: absolute;
         z-index: 100000;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     }
     .homepage_navigation_fixed{
         position: fixed;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
     }
     .homepage_navigation_logoBar{
         width: 70%;
@@ -95,7 +96,6 @@
         
     }
     .homepage_navigation_navMenuPageLinks{
-        font-size: 1vw;
         transition: linear 0.1s;
         cursor: pointer;
         margin-right: 2vw;
@@ -228,7 +228,7 @@
     }
     .homepage_navigation_navMenuPageLinks{
         padding: 3vw 2vw;
-        font-size: 2vw;
+        /* font-size: 2vw; */
     }
     .homepage_navigation_loginButton{
         background-color: rgb(9,111,88);

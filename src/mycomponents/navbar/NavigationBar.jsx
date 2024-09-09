@@ -17,6 +17,8 @@ import {
   User,
   UserPlus,
   BookCheck,
+  HeartPulse,
+  Cross,
 } from "lucide-react"
 
 import {
@@ -231,6 +233,32 @@ const NavigationBar = () => {
                           <DropdownMenuGroup>
                             <DropdownMenuSub>
                               <DropdownMenuSubTrigger>
+                                <Cross className="mr-2 h-4 w-4"/>
+                                <span>Health</span>
+                              </DropdownMenuSubTrigger>
+                              <DropdownMenuPortal>
+                                <DropdownMenuSubContent>
+                                <DropdownMenuItem>
+                                  <HeartPulse className="mr-2 h-4 w-4" />
+                                    <Link to="/health/add" className='homepage_navigation_navMenuPageLinks'>Today's Health</Link>
+                                  </DropdownMenuItem>
+                                  <DropdownMenuItem>
+                                    <Mail className="mr-2 h-4 w-4" />
+                                    <Link to="/health/history" className='homepage_navigation_navMenuPageLinks'>Health History</Link>
+                                  </DropdownMenuItem>
+                                  <DropdownMenuSeparator />
+                                  {/* <DropdownMenuItem>
+                                    <PlusCircle className="mr-2 h-4 w-4" />
+                                    <span>More...</span>
+                                  </DropdownMenuItem> */}
+                                </DropdownMenuSubContent>
+                              </DropdownMenuPortal>
+                            </DropdownMenuSub>
+                          </DropdownMenuGroup>
+                          {/* <DropdownMenuSeparator />
+                          <DropdownMenuGroup>
+                            <DropdownMenuSub>
+                              <DropdownMenuSubTrigger>
                                 <UserPlus className="mr-2 h-4 w-4" />
                                 <span>Invite users</span>
                               </DropdownMenuSubTrigger>
@@ -252,7 +280,7 @@ const NavigationBar = () => {
                                 </DropdownMenuSubContent>
                               </DropdownMenuPortal>
                             </DropdownMenuSub>
-                          </DropdownMenuGroup>
+                          </DropdownMenuGroup> */}
                           <DropdownMenuSeparator />
                           <DropdownMenuItem onClick={()=>handleLogout()}>
                             <LogOut className="mr-2 h-4 w-4" />

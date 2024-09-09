@@ -15,17 +15,17 @@ import ButtonLoading from "@/mycomponents/loading/Loading";
 const API_PATH = import.meta.env.VITE_API_PATH;
 
  
-const MedicineCreate = () => {
+const DoctorUpdate = () => {
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
+    email: "",
     imgLink: "",
-    genericName: "",
-    price: "",
+    fee: "",
+    phoneNo: "",
+    calendlyLink: "",
   })
   const [buttonLoading, setButtonLoading] = useState(false);
   
-
   // Handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value })
@@ -35,7 +35,7 @@ const MedicineCreate = () => {
   const handleCreate = async () => {
     try {
       setButtonLoading(true);
-      const response = await axios.post(`${API_PATH}/medicine/create`, formData)
+      const response = await axios.post(`${API_PATH}/doctor/create`, formData)
       console.log("Form submitted successfully:", response.data)
       setButtonLoading(false);
       navigate(`/medicine`);
@@ -45,8 +45,8 @@ const MedicineCreate = () => {
   }
 
   return (
-    <div className="flex justify-center items-center h-[100vh] pt-[2vw]">
-        <Card className="w-[350px]">
+    <div className="flex justify-center pt-[17vw] pb-[8vw] md:pt-[10vw] md:pb-[5vw] lg:pt-[7vw] lg:pb-[3vw]">
+        <Card className="w-[400px]">
         <CardHeader>
             <CardTitle>Add Medicine</CardTitle>
             <CardDescription>Deploy your new project in one-click.</CardDescription>
@@ -56,28 +56,27 @@ const MedicineCreate = () => {
             <div className="grid w-full items-center gap-4">
                 {/* Name Field */}
                 <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Name of medicine" value={formData.name} onChange={handleChange} />
+                    <Label htmlFor="email">Name</Label>
+                    <Input type="email" id="name" placeholder="Email of doctor" value={formData.email} onChange={handleChange} />
                 </div>
 
                 {/* Image Link Field */}
                 <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="imgLink">Image Link</Label>
-                <Input id="imgLink" placeholder="Image link of your medicine" value={formData.imgLink} onChange={handleChange} />
-                </div>
-
-                {/* Generic Name Field */}
-                <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="genericName">Generic Name</Label>
-                <Input id="genericName" placeholder="Generic name of medicine" value={formData.genericName} onChange={handleChange} />
+                <Input id="imgLink" placeholder="Image link of Doctor" value={formData.imgLink} onChange={handleChange} />
                 </div>
 
                 <div className="flex flex-col space-y-1.5">
-                <Label htmlFor="price">Price</Label>
-                <Input type="number" id="price" placeholder="Price of Medicine" value={formData.price} onChange={handleChange} />
+                    <Label htmlFor="fee">Fee</Label>
+                    <Input type="number" id="fee" placeholder="Fee of doctor" value={formData.fee} onChange={handleChange} />
                 </div>
 
-                <Button variant="outline" type="button" onClick={()=>handleCreate()}>
+                <div className="flex flex-col space-y-1.5">
+                    <Label htmlFor="calendlyLink">Calendly Link</Label>
+                    <Input id="calendlyLink" placeholder="calendly link of doctor" value={formData.calendlyLink} onChange={handleChange} />
+                </div>
+
+                <Button type="button" onClick={()=>handleCreate()}>
                     {buttonLoading?
                         <ButtonLoading />
                         :
@@ -93,4 +92,4 @@ const MedicineCreate = () => {
   )
 }
 
-export default MedicineCreate;
+export default DoctorUpdate;
